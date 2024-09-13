@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        body {
+            background-color: rgba(201, 42, 233, 0.144);
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar Styling */
+        .s {
+            padding: 30px;
+            width: 100%;
+            top: 0;
+            text-align: center;
+            background-color: aqua;
+            position: fixed;
+            z-index: 100;
+        }
+
+        .s a {
+            padding: 20px;
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .s a:hover {
+            background-color: white;
+            padding: 10px;
+            border: 2px solid red;
+            border-radius: 30%;
+        }
+
+        /* Home Section */
+        .home {
+            margin-top: 120px;
+            text-align: center;
+        }
+
+        .home h1 {
+            font-size: 3em;
+        }
+
+        /* About Section */
+        #m {
+            width: 80%;
+            background-color: white;
+            margin: auto;
+            padding: 20px;
+        }
+
+        #m img {
+            border-radius: 50%;
+            height: 7em;
+            margin-right: 20px;
+        }
+
+        .ss {
+            display: flex;
+            align-items: center;
+        }
+
+        .ss p {
+            font-size: 1.2em;
+        }
+
+        /* Skills Section */
+        .skills {
+            margin-top: 20px;
+        }
+
+        .skills table {
+            width: 50%;
+            margin-left: 140px;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .skills th,
+        .skills td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Projects Section */
+        .projets .sum {
+            width: 80%;
+            background-color: white;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .projets .sum p {
+            width: 250px;
+            background-color: rgba(123, 122, 122, 0.366);
+            font-size: 18px;
+            border-radius: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .projets .sum p img {
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        /* Contact Section */
+        .ut {
+            width: 80%;
+            background-color: white;
+            margin: auto;
+            margin-top: 30px;
+            padding: 20px;
+        }
+
+        .ut input {
+            width: 100%;
+            height: 30px;
+            margin-bottom: 10px;
+        }
+
+        .ut button {
+            width: 100%;
+            padding: 10px;
+            font-size: 20px;
+            background-color: rgb(255, 0, 234);
+            border: none;
+            color: white;
+        }
+
+        /* Footer */
+        .oi {
+            padding: 30px;
+            width: 100%;
+            text-align: center;
+            background-color: aqua;
+            margin-top: 20px;
+        }
+
+        .social-Links {
+            padding: 25px;
+        }
+
+        .social-Links a {
+            padding: 30px;
+            font-size: 30px;
+        }
+        .skills table{
+                background-color: white;
+                width: 82%;
+            }
+
+        /* Media Queries for Responsiveness */
+        @media screen and (max-width: 768px) {
+
+            /* Smaller screens (Tablets) */
+            .ss {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .skills table {
+                margin-left: 15px;
+                width: 90%;
+                height: 200px;
+                background-color: white;
+
+            }
+
+            .p img {
+                width: 50px;
+            }
+
+            .ss img {
+                margin-bottom: 20px;
+            }
+
+            .home h1 {
+                font-size: 2.5em;
+            }
+
+            .projets .sum {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .s {
+                margin-left: -50px;
+            }
+
+            .projets {
+                width: 350px;
+                margin-left: 25px;
+                margin-top: 45px;
+            }
+
+            .projets h2 {
+                margin-left: -25px;
+            }
+
+            .social-Links {
+                margin-left: -65px;
+                font-size: 2px;
+                padding: 5px;
+            }
+
+            footer {
+                margin-left: -7px;
+            }
+
+
+        }
+
+        @media screen and (max-width: 576px) {
+
+            /* Extra small devices (Phones) */
+            .s a {
+                font-size: 16px;
+                padding: 10px;
+            }
+          
+
+            .home h1 {
+                font-size: 2em;
+            }
+
+            .skills table {
+                font-size: 14px;
+            }
+
+            .skills th,
+            .skills td {
+                padding: 8px;
+            }
+
+            .ut input {
+                font-size: 16px;
+            }
+
+            .ut button {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav>
+        <div class="s">
+            <a href="#home">Home</a>
+            <a href="#m">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#Projets">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <div class="home" id="home">
+        <div class="u">
+            <h1>Welcome to my Portfolio</h1>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="m">
+        <h2>About me</h2>
+        <div class="ss">
+            <img src="./PASSPORT SIZE.IMG.jpg" alt="Profile Picture">
+            <p>Hello! My Name is <b>M.Sumanth Reddy</b> Enthusiastic Computer Science graduate with strong skills in C,
+                Java, SQL, and front-end technologies like HTML and CSS. Experienced in developing web pages and basic
+                software applications through academic projects.</p>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="skills" id="skills">
+        <div class="lm">
+            <h2>My Skills</h2>
+            <table>
+                <thead>
+                    <!-- Optional Table Headers -->
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Web Technologies</th>
+                        <td>HTML, CSS, JavaScript, React</td>
+                    </tr>
+                    <tr>
+                        <th> Basic Programming</th>
+                        <td>C, C++, Java, SQL</td>
+                    </tr>
+                    <tr>
+                        <th>Tools & OS</th>
+                        <td>Git, GitHub, VSCode</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="projets" id="Projets">
+        <h2>Projects</h2>
+        <div class="sum">
+
+            <p><img src="https://www.globalsign.com/application/files/7416/3763/0034/General_Banner_WhatisIOT_4_APAC_2021_11_22.jpg"
+                    alt="IOT Project">
+                The Interconnected Revolution
+            </p>
+            <p><img src="https://miro.medium.com/v2/resize:fit:640/0*_6WEDnZubsQfTMlY.png" alt="Neural Network Project">
+                Advanced Neural Network for Fraud Detection
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Contact Section -->
+    <div class="ut" id="contact">
+        <h2>Contact Me</h2>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" size="155" height="50px"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" size="155"><br>
+        <label for="phone">Phone Number:</label><br>
+        <input type="text" id="phone" size="155"><br>
+        <center><button>Send Message</button></center>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="oi">
+        @Contact me more on
+        <div class="social-Links">
+            <a href="https://github.com/Sumanth-9515"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.google.co.in/"> <i class="fa-brands fa-google"></i></a>
+            <a href="https://www.linkedin.com/feed/"> <i class="fa-brands fa-linkedin"></i> </a>
+            <a href="tel:9515174064"> <i class="fa-solid fa-mobile"></i></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
